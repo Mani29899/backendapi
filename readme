@@ -1,0 +1,22 @@
+Error:
+Client does not support authentication protocol requested by server; consider upgrading MySQL client
+
+
+To resoleve the error run the syntax in the workbench;
+alter user '<username>'@'localhost' identified with mysql_native_password by '<userpassword>';
+
+
+
+for the error:
+
+Client does not support authentication protocol requested by server; consider upgrading MySQL client ->
+Ex: below
+alter user 'root'@'localhost' identified with mysql_native_password by 'root';
+
+
+create table functionality listed below
+    // let sqlQuery = create table user(id bigint auto_increment primary key,name varchar(150),role bigint default 0)
+    // connection.query(sqlQuery, (err, res) => {
+    //     if (err) throw err;
+    //     console.log('table is created succesfully in the db')
+    // })
